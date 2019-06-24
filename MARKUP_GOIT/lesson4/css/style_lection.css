@@ -1,0 +1,35 @@
+.d1, .d2, .d3, .d4
+{
+    font:  Helvetica : sans-serif;
+    width: 300px;
+    margin-top: 10px;
+    color: #ffff00;
+    background: red;
+
+}
+.d2
+{padding-left: 30px;
+    padding-right: 10px;
+
+}
+.d3
+{margin-left: 30px;
+    border-right: 10px solid #000000;
+
+}
+
+.container {
+
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    border: 1px solid red;
+}
+.d4
+{
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 10px;
+    border: 10px solid orange;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   // swap ""         `shouldBe` ""
+  //  swap "CodeWars" `shouldBe` "cODEwARS"
+  //  swap "abc"      `shouldBe` "ABC"
+  //  swap "ABC"      `shouldBe` "abc"
+ //   swap "123235"   `shouldBe` "123235"
+ //  Given a string, swap the case for each of the letters.
+ var str = "abc";
+var arr =  str.split('');
+   for (var i=0; i<arr.length; i++){
+      if (arr[i] == arr[i].toUpperCase()){
+
+          arr[i] =  arr[i].toLowerCase(); continue;
+
+   }    arr[i] = arr[i].toUpperCase();
+   }
+      newStr = arr.join('');
+  // console.log(newStr);
+   function swap(str) {
+       var arr =  str.split('');
+       for (var i=0; i<arr.length; i++){
+           if (arr[i] == arr[i].toUpperCase()){
+
+               arr[i] =  arr[i].toLowerCase(); continue;
+
+           }    arr[i] = arr[i].toUpperCase();
+       }
+       newStr = arr.join('');
+       return newStr;
+
+   }
+   console.log( swap(str));
+//Решения из CODEWARS
+   function swapCase(x) { return x == x.toLowerCase() ? x.toUpperCase() : x.toLowerCase() }
+
+   function swap1(str) { return str.split("").map(swapCase).join("") }
+
+   function swap2(str){
+       return str.split('').map(function(v){
+           return v.charCodeAt(0) > 96 ? v.toUpperCase() : v.toLowerCase();
+       }).join('');
+   }
+</script>
+
+</body>
+</html>

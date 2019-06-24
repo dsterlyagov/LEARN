@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var questions = [{
+        question: "What's the currency of the USA?",
+        choices: ["US dollar", "Ruble", "Horses", "Gold"],
+        corAnswer: 0
+    }, {
+        question: "Where was the American Declaration of Independence signed?",
+        choices: ["Philadelphia", "At the bottom", "Frankie's Pub", "China"],
+        corAnswer: 0
+    }];
+    questions.forEach(function(item, i, arr) {
+        item['usersAnswer']= null;
+
+    });
+    console.log( questions   );
+</script>
+
+</body>
+</html>

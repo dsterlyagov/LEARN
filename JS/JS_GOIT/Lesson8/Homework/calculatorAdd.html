@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Calculator() {
+        var methods = {
+            "-": function (a, b) {
+                return a - b;
+            },
+            "+": function (a, b) {
+                return a + b;
+            }
+        };
+//Создали метод read() на вход подается число пробел операция число
+        // разбили входящую строку по пробелу на 1 число операцию и 2 число
+        //создали объект methods куда включили две основные операции + -
+        // в качестве ключа а функцию операции над числами в качестве значения
+
+        this.read = function (operation) {
+            a = +(operation.split(' ')[0]);
+            b = +(operation.split(' ')[2]);
+            operator = operation.split(' ')[1];
+
+// если ключ объекта methods не соответствует поданному на вход значению operator
+            //или число а или b не является числом тогда метод read() возвращает NaN
+            //Если все ок тогда из объекта methods вызывается функция являющаяся значением
+            //ключа operator со входными параметрами a b
+            if (!methods[operator] || isNaN(a) || isNaN(b)) {
+                 return NaN;}
+
+            return methods[operator](a, b);
+        }
+        //Для добавления  в объект methods операций т.е. расширения калькулятора пишем метод addMethod
+            //  на вход два параметра первый параметр name идет в ключи второй параметр func Это текст функции
+        this.addMethod = function(name, func) {
+            methods[name] = func;
+
+        }
+
+
+    }
+
+
+
+    var calculator = new Calculator();
+    console.log (calculator.read('3 + 5'));
+
+    calculator.addMethod("**", function(a, b) {
+       return Math.pow(a, b);
+    });
+
+   var result = calculator.read("2 ** 3");
+   console.log( result ); // 8
+</script>
+
+</body>
+</html>

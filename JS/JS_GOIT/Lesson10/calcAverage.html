@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   // Давайте создадим калькулятор, который может вычислять среднее для произвольного числа аргументов.
+
+     //   Тест ожидает, что вы предоставите объекту Calculator усредненный метод:
+   //Тест также ожидает, что когда вы не передаете аргументы, он возвращает 0. Предполагается, что аргументы будут целыми числами.
+
+     //  Ожидается, что Calculator.average (3,4,5) вернется 4.
+   var Calculator = {
+       average: function() {
+           var ave = 0;
+           for (var i =0, sum = 0; i<arguments.length; i++){
+               sum +=  arguments[i];
+           }
+           if(arguments.length>0)  {result = sum/arguments.length;}
+           else {result = 0;}
+           return   result ;
+       }
+   };
+   console.log(Calculator.average(2,4,2));
+   //Best of Codewars
+   //var Calculator = {
+  // average: function() {
+
+  //     return Array.prototype.slice.call(arguments).reduce(function(prev, next) {
+  //         return prev + next;
+//       }, 0) / (arguments.length || 1);
+//   }
+//   };
+</script>
+
+</body>
+</html>

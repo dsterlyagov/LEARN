@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function checkPermissionDecorator(f){
+      return function () {
+          if(isAdmin()){
+              return f.apply(this, arguments);
+          }
+          alert('Недостаточно прав');
+      }
+  }
+  //Использование декоратора
+    function save() {
+
+    }
+    save = checkPermissionDecorator(save);
+  //Теперь вызов функции save() проверяет права
+</script>
+
+</body>
+</html>

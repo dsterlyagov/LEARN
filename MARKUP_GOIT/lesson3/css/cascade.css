@@ -1,0 +1,8 @@
+body{font-size: 24px;}
+div p {
+	color: yellow;
+}
+div.main{color: blue;}
+div  h1 {
+	color: green;
+}

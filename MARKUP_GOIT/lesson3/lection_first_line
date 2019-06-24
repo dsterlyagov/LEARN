@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>first_line_letter</title>
+	<link rel="stylesheet" type="text/css" href="css/first_line.css">
+</head>
+<body>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur 
+		<br>Laboriosam, eligendi!	adipisicing elit. Excepturi sapiente saepe, recusandae vel libero, laboriosam temporibus.
+		<br>
+		<span>Laboriosam, eligendi!</span>
+		<br>	
+		Fuga fugit eveniet adipisci eaque, laboriosam beatae fugiat voluptatem eum deserunt pariatur.
+	</p>
+</body>
+</html>

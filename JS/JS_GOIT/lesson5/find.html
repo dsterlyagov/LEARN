@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var fruits = ["Яблоко", "Апельсин", "Груша", "Персик", "Банан"];
+    var research = "Перс";
+    function find(arr,search){
+        var position = -1;
+       for(var i=0 ; i<arr.length ; i++){
+        if(arr[i]==search){
+            position = i;
+        }  }
+        return position;
+        };
+        console.log(find(fruits, research));
+</script>
+
+</body>
+</html>

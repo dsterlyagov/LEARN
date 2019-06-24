@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    var someNumbers = [1,2,3,4,5];
+    function sum(array) {
+        // Use array.reduce() to find and return the
+        // sum of the values in array.
+     return  array.reduce(function(sum, current) {
+            return sum + current;})
+
+    }
+
+console.log(sum(someNumbers));
+
+</script>
+<body>
+
+</body>
+</html>

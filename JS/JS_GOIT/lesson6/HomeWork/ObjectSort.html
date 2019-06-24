@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var vasya = { name: 'Вася', age: 2};
+    var masha = { name: 'Маша', age: 18};
+    var vovochka = { name: 'Вова', age: 11};
+    var people = [vasya, masha, vovochka];
+   people.sort(function (a, b) {return  b.age - a.age;});
+
+   for (var i=0 ; i< people.length; i++){
+       
+       console.log(people[i].name);
+       };
+
+    console.log (people);
+//console.log (people.sort(compareReversed));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="left">левая колонка</div>
+  <div class="center">
+    средняя колонка
+    <br> более высокая,
+    <br> занимает 3 строки
+  </div>
+  <div class="right">правая колонка</div>
+</div>
+
+body {
+  font-size: 29px;
+}
+
+.container {
+  min-width: 900px;
+  -background: red;
+}
+
+.container:after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+.left,
+.center,
+.right {
+  float: left;
+}
+
+.left {
+  width: 16%;
+  margin-left: 2%;
+}
+
+.center {
+  width: 56%;
+}
+
+.right {
+  width: 24%;
+  margin-right: 2%;
+}

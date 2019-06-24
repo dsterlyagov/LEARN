@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   for (var i= 0 ; i< 10 ; i++){
+       setTimeout(function () {
+           console.log(i)
+
+       }, 1000);
+
+          }
+          //В первом случае сначала отработает цикл а потом выполнится функция. В итоге будет 10 10 10 10 10 10 10 10
+   // это потому что i цикла не привязана  к функции поэтому значение i будет после цикла
+   //Во втором случае j привязывается к setTimeout замыканием
+
+   for (var j= 0 ; j< 10 ; j++){
+       (function(j){setTimeout(function () {
+          console.log(j)
+
+      }, 5000);})(j);
+
+
+   }
+</script>
+
+</body>
+</html>

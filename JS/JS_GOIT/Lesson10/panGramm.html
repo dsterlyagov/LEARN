@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   // Панграмма - это предложение, которое содержит каждую букву алфавита хотя бы один
+   // раз. Например, предложение «Быстрая коричневая лиса перепрыгивает через ленивую собаку»
+   // - это панграмма, потому что она использует буквы A-Z хотя бы один раз (регистр не имеет значения).
+  //  По заданной строке определите, является ли она панграммой. Верните True, если это так, и
+  //  False, если нет. Игнорировать цифры и знаки препинания
+var str = 'The quick brown fox jumps over the lazy dog.!!!';
+var arr = str.toLowerCase().split('').sort();
+
+var obj = {}
+arr.forEach(function (item, i) {
+    if(!obj[item]){
+        obj[item] = 1;
+    } else {
+        obj[item] +=1;
+    }
+
+})
+   var newArr = [];
+   for (key in obj){
+       newArr.push(key);
+
+   }
+  var Arr = newArr.splice(newArr.indexOf('a'), 26);
+console.log(obj);
+   console.log(Arr);
+
+   if(Arr[25]=='z'){
+       alert('ku-ku');
+   } else {alert('MYAU')};
+
+   function isPangram(string){
+       var arr = str.toLowerCase().split('').sort();
+       var obj = {};
+       arr.forEach(function (item, i) {
+           if(!obj[item]){
+               obj[item] = 1;
+           } else {
+               obj[item] +=1;
+           }
+
+       })
+       var newArr = [];
+       for (key in obj){
+           newArr.push(key);
+
+       }
+     var Arr1 =  newArr.splice(newArr.indexOf('a'), 26);
+       if(Arr1[25]=='z'){
+           return true;
+       } else {return false};
+
+   }
+   console.log(isPangram(str));
+//function isPangram(string){
+//    string = string.toLowerCase();
+//    return "abcdefghijklmnopqrstuvwxyz".split("").every(function(x){
+//        return string.indexOf(x) !== -1;
+//    });
+//    }
+</script>
+
+</body>
+</html>

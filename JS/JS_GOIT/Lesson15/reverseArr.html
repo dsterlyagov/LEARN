@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+      Array.prototype.reverse1 = function () {
+
+          var newArr = [];
+
+          for (var i = this.length -1; i >= 0; i--) {
+              newArr.push(this[i]);
+          }
+          this.splice(0,this.length);
+          for (var j= 0; j< newArr.length; j++) {
+              this.push(newArr[j]);
+          }
+
+
+
+
+          return  this;
+      }
+
+
+    function reversed (arr) {
+          var str = '';
+          var newArrstr = arr.join();
+          for (var i = newArrstr.length -1; i >= 0; i--) {
+              str += newArrstr[i];
+          }
+          return str.split(',');
+    };
+
+    var input = [1, 2, 3, 4];
+    console.log(reversed(input));
+      console.log(input.reverse1());
+      console.log(input);
+</script>
+
+
+
+</body>
+</html>
+<!--http://www.codewars.com/kata/array-dot-prototype-dot-reverse-->
+<!--Array.prototype.reverse = function() {-->
+<!--for(var i = 0, j = this.length-1; i < j; i++, j&#45;&#45;) {-->
+<!--var tmp = this[i];-->
+<!--this[i] = this[j];-->
+<!--this[j] = tmp;-->
+<!--}-->
+<!--return this;-->
+<!--};-->
+<!--Метод reverse () массива пропал! Перепишите это, быстро-острый!-->
+
+<!--Когда этот метод вызывается, он меняет порядок элементов в исходном массиве. Затем он возвращает тот же самый оригинальный массив. Не нужно создавать новые массивы для передачи этого ката.-->
+
+<!--Вот пример:-->
+
+<!--var input = [1, 2, 3, 4];-->
+<!--input.reverse (); // == [4, 3, 2, 1] // возвращено .reverse ()-->
+<!--вход; // == [4, 3, 2, 1] // элементы, переупорядоченные в исходном массиве-->

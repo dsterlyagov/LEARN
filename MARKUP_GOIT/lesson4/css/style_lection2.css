@@ -1,0 +1,17 @@
+.container {
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    padding: 150px 0;
+}
+.d0{
+    width: 50px;
+    height: 50px;
+    background: red;
+    left: 0;
+    margin: auto;
+  /*  margin: 41.666666667%;Расчет следующий .d0/.container - 50/300 в данном случае соотношение блоков затем для того чтобы сместить центральную точку
+    из 50% вычитаем результат 50% - 8.333333 получаем 41.666666*/
+
+}

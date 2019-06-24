@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function add(a,b){
+        return a+b;
+    }
+
+    function mul(a,b){
+        return a*b;
+    }
+
+
+    var make_lazy1 = function (operation,a,b) {
+        // TODO: implement this function
+        return operation (a,b);
+
+    };
+    var lazy_value1 = make_lazy1(add, 2,3);
+    console.log(lazy_value1);
+  //5
+    //Задача в том чтобы функция выполняла операции не сразу а после вызова
+    //1 Этап сначала сделаем так чтобы функция выполнялась сразу. Для этого
+    //на вход функции подается 3 параметра operation,a,b
+    // operation отвечает за операцию т.е. это название первой функции которая выполняется
+    //a,b это параметры которые считаются
+    //Итоговое выражение return operation (a,b)
+
+
+//2 этап. Для того чтобы функция выполнялась не сразу необходимо чтобы это была функция, которая
+// выполняет operation
+//т.е. return function(){return operation(a, b)}
+    var make_lazy2 = function (operation,a,b) {
+        // TODO: implement this function
+        return function (){return operation (a,b);}
+
+    };
+    var lazy_value2 = make_lazy2(add, 2,11);
+    console.log(lazy_value2());
+//3 этап если мы заранее не знаем сколько аргументов необходимо использовать псевдомассив
+    //arguments и метод apply в который будут передаваться аргументы
+
+    var make_lazy = function (operation,a,b) {
+      var args = arguments;
+        // TODO: implement this function
+        var operation = args[0];
+            // в значение operation идет первый элемент function (operation,a,b)
+        // теперь заимствуем метод splice у массива для arguments и берем значения с 1 до конца
+        // массив заимствуем splice() используя для arguments и берем с 1 элемента а не  нулевого
+        var arg = [].splice.call(args, 1);
+
+        //console.log(operation);
+       // console.log(args);
+        return function (){return operation.apply(args, arg);
+        //вызываем
+        }
+
+    };
+    var lazy_value = make_lazy(add, 2,11);
+    // это значение переменной operation ƒ add(a,b){  return a+b;   }
+
+    console.log(lazy_value());
+</script>
+
+</body>
+</html>

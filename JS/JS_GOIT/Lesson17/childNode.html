@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<div type="vv">Читатели: </div>
+<ul>
+    <li type="eee">Вася</li>
+    <li>Петя</li>
+    <li>Ваня</li>
+</ul>
+
+<!-- комментарий -->
+
+<script>
+var childNodes = document.body.childNodes;
+for (var i = 0; i < childNodes.length; i++) {
+
+    // отфильтровать не-элементы
+    if (childNodes[i].nodeType != 1) continue;
+
+     childNodes[i].setAttribute('vasya', 'petya');
+
+}
+console.log(document.querySelector('div').attributes[0]);
+
+
+
+</script>
+
+</body>
+
+</html>

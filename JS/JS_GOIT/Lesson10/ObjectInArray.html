@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj = {
+        person1Age: 20,
+        person1Name: 'Ivanov',
+        person2Age: 30,
+        person2Name: 'Petrov',
+        person3Age: 40,
+        person3Name: 'Sidorov'
+    };
+    function extractString(object) {
+        var arr = [];
+        for (item in object){
+            if(typeof(object[item]) == "string"){
+                arr.push(object[item]);
+            }
+        }
+        return arr;
+    }
+    function extractNumber(object) {
+        var arr = [];
+        for (item in object){
+            if(typeof(object[item]) == "number"){
+                arr.push(object[item]);
+            }
+        }
+        return arr;
+    }
+   console.log(extractString(obj));
+    console.log(extractNumber(obj));
+    var ages = [20,30,40];
+    var names = ['Ivanov', 'Petrov', 'Sidorov'];
+</script>
+
+</body>
+</html>

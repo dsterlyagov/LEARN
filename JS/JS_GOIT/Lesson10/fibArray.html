@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Функция 'Фибоначчи' должна возвращать массив чисел Фибоначчи. Функция принимает число в качестве
+   // аргумента, чтобы
+   // решить, сколько нет. элементов для производства. Если аргумент меньше или равен 0, вернуть
+   // пустой массив
+   // fibonacci(4); // should return [0,1,1,2]
+   // fibonacci(-1); // should return []
+    function fibonaciSeries(num){
+        var first=0, second=1, arr= [];
+        for(var  i=0; i<num; i++){
+            if( i<=1){
+                 next = i;
+            }  else  {
+                next = first+second;
+                first = second;
+                second = next;
+            }
+            arr.push(next);
+        }
+        if (num > 0) {return arr;}
+        else {return [];}
+
+    }
+
+   console.log(fibonaciSeries(-1));
+
+    //The Best of CodeWars
+  //  function fibonacci(n) {
+   //     if (n <= 0) return [];
+   //     if (n == 1) return [0];
+    //    if (n == 2) return [0,1];
+    //    var res = fibonacci(n-1);
+    //    res.push(res[res.length-1] + res[res.length-2]);
+     //   return res;
+   // }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var vasya = "Вннв";
+    function palindrom(str) {
+        str = String(str.toUpperCase());
+        newStr=String(str.split('').reverse().join(''));
+       if(str==newStr) {return true;}
+                return false;
+            }
+            console.log(palindrom(vasya));
+
+</script>
+
+</body>
+</html>

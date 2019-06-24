@@ -1,0 +1,75 @@
+<!--Домашнее задание. Верстка. Урок 4.
+Задание 1
+Файл task1.html
+Необходимо сверстать меню из макета menu1.png использую inline-block.
+
+Линия растянута на всю ширину страницы. Само меню шириной 900px и центрируется.
+Шрифт рекомендую - Economica bold.
+Для подключения шрифта вставьте link в title:
+<link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
+Задание 2
+Файл task2.html
+Необходимо сверстать меню из макета menu2.png использую float.
+
+Линия растянута на всю ширину страницы. Само меню шириной 900px и центрируется.
+Шрифт рекомендую - Economica bold.
+<link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
+Задание 3
+Файл task3.html
+Необходимо сверстать пейджер из макета pager.png.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/task_hohol.css">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Задание 1</h2>
+<div class="wrapper">
+  <nav class="first">
+    <a href="#">home</a>
+    <a href="#">news</a>
+    <a href="#">economics</a>
+    <a href="#">local</a>
+    <a href="#">sport</a>
+    <a href="#">culture</a>
+    <a href="#">travels</a>
+  </nav>
+</div>
+  
+  <h2>Задание 2</h2>
+  <div class="wrapper">
+  <nav class="second">
+    <a href="#">home</a>
+    <a href="#">news</a>
+    <a href="#">economics</a>
+    <a href="#">local</a>
+    <a href="#">sport</a>
+    <a href="#">culture</a>
+    <a href="#">travels</a>
+  </nav>
+</div>
+  
+  <h2>Задание 2</h2>
+  <div class="wrapperWhite">
+  <nav class="third">
+    <a href="#">&#171;
+ First</a>
+    <a href="#">&#171; Prew</a>
+    <a href="#" class="number">1</a>
+    <a href="#" class="number">2</a>
+    <span>...</span>
+    <a href="#" class="number">5</a>
+    <a href="#" class="number">6</a>
+    <a href="#" class="number">7</a>
+    <a href="#" class="number">8</a>
+    <a href="#" class="number">9</a>
+    <a href="#">Next &#187;</a>
+    <a href="#">Last &#187;</a>
+  </nav>
+</div>
+</body>
+</html>
+

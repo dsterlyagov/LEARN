@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+            var user = {
+                        1: 'Василий',
+                        2: 'Петров',
+                        3: 'Иванович',
+                length: 3
+            };
+            user.join = [].join;
+            var newUser = user.join(';')
+           console.log(newUser);
+
+
+            var obj = { // обычный объект с числовыми индексами и length
+                0: "А",
+                1: "Б",
+                2: "В",
+                length: 3
+            };
+
+            obj.join = [].join;
+            console.log( obj.join(';') ); // "A;Б;В"
+
+            var obj = { // обычный объект с числовыми индексами и length
+                0: "А",
+                1: "Б",
+                2: "В",
+                length: 3
+            };
+
+            obj.join = [].join;
+            alert( obj.join(';') ); // "A;Б;В"
+</script>
+
+</body>
+</html>

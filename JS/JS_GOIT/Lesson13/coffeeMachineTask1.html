@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Machine() {
+        this.__enabled = false;
+        this.enable = function () {
+            this.__enabled = true;
+        };
+        this.disable = function () {
+            this.__enabled = false;
+        };
+
+
+    }
+    function coffeeMachine(power, capacity){
+        Machine.call(this);
+        var WATER_HEAT_CAPACITY = 4200;
+        var waterAmount = 0; // количество воды в кофеварке
+        this.WaterAmount = function (amount) {
+            if(!arguments.length){
+                return this.waterAmount;
+            }
+            if(amount<0){
+                throw new Error("Значение должно быть положительным");
+            } if(amount>capacity){
+                throw new Error("Нельзя залить воды больше" + capacity);
+            }
+            waterAmount =  amount;
+        }
+        function getBoilTime() {
+            return waterAmount*WATER_HEAT_CAPACITY*80/power;
+        }
+        function onReady() {
+            alert('Кофе готов');
+        }
+        this.run = function(){
+           var clearId = setTimeout(onReady, getBoilTime());
+
+        }
+        alert('Создана кофеварка мощностью' + power +'Ватт');
+        this.getEnable = function(){
+            return this.__enabled;
+        }
+
+
+    }
+
+
+    var coffeeMachine = new coffeeMachine(85000,500);
+    coffeeMachine.WaterAmount(450);
+    coffeeMachine.run();
+    console.log(coffeeMachine.waterAmount);
+   // console.log(coffeeMachine.getEnable());
+   // alert(coffeeMachine.WaterAmount());
+</script>;
+
+
+
+</body>
+</html>

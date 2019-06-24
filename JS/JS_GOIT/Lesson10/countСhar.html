@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //  Основная идея заключается в подсчете всех встречающихся символов (UTF-8) в строке.
+ //       Если у вас есть строка, подобная этой aba, то результат должен быть {'a': 2, 'b': 1}
+  //  Что если строка пуста? Тогда результатом должен быть пустой литерал объекта {}
+var str = 'мфынф';
+var arr = str.toLowerCase().split('');
+var obj = {};
+arr.forEach(function (item) {
+    if(!obj[item]){
+        obj[item]= 1;
+    } else {
+        obj[item] +=1;
+    }
+})
+  function count(string){
+      var arr = string.toLowerCase().split('');
+      var obj = {};
+      arr.forEach(function (item) {
+          if(!obj[item]){
+              obj[item]= 1;
+          } else {
+              obj[item] +=1;
+          }
+      })
+      return obj;
+  }
+console.log(obj);
+  console.log(count(str));
+  // function count (string) {
+  //     var count = {};
+  //     string.split('').forEach(function(s) {
+  //         count[s] ? count[s]++ : count[s] = 1;
+  //     });
+  //     return count;
+  // }
+</script>
+
+</body>
+</html>

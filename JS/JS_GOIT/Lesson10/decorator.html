@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function someFunction(text) {
+       console.log('Working on 0' + text);
+       return 0;
+   }
+
+   function someFunction1(text) {
+       console.log('Working on 1' + text);
+       return 1;
+   }
+   function decorator(func) {
+
+       return function () {
+           console.log('Starting');
+           return func.apply(this, arguments)
+
+       }
+
+   }
+   var newSomeFunction = decorator(someFunction);
+   console.log('-------------');
+   var newSomeFunction1 = decorator(someFunction1);
+   console.log(newSomeFunction('Hello world'));
+   console.log(newSomeFunction1('hi all'));
+
+</script>
+
+</body>
+</html>

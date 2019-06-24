@@ -1,0 +1,13 @@
+div[id]
+{color: red;}
+div[class="myclass mysuperclass"]
+{text-decoration: underline;}
+div[id][class="myclass"]
+{border: 2px dashed#000000;}
+.myclass.mysuperclass {
+    text-decoration: underline;
+}
+div[id][class~="myclass"]
+{background: yellow;}
+div[id][class*="super"]
+{background: green;}

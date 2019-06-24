@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+var obj1 = {
+    className: 'open menu menu'
+};
+
+function removeClass(obj, cls){
+    var classes =  obj.className.split(' ');// сначала получаем строку со значениями свойства метода obj
+    // полученную строку методом split преобразуем в массив по пробельному символу
+//запускаем цикл со значениями элементов масссива если совпадение есть функция заканчивает работу
+    for (var i = 0; i< classes.length; i++){
+          if(classes[i] == cls) {classes.splice(i, 1);
+         i--  ;}; //class уже есть i-- нужно чтобы дубликат убирать поскольку при дублировании без него дубликат не удалится
+
+    }
+    return obj.className = classes.join(' '); //и обновить свойство объединяем теперь нужно соединить элементы массива
+    // в одну строку методом join()
+}
+console.log(removeClass(obj1,'menu'));
+
+</script>
+<body>
+
+</body>
+</html>

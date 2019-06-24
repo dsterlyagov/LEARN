@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var p = 0;
+    var arr = ['кришна', 'кришна', 'кришна', 'хахре', 'харе', 'харе', '8q0w','кришна'];
+    var newArr = [];
+    for (var i = 0; i< arr.length; i++) {
+        for (var j = 0; j < arr.length; j++) {
+
+
+            if (arr[i] == arr[j]) {
+                if (i==j) { console.log( newArr.push(arr[i]));}
+                p++;
+                console.log(arr[p-1]);
+                break;
+
+            }
+
+        }
+        ;
+    }
+        console.log(newArr);
+
+   // function unique(arr) {
+      //  for (var i = 0; i< arr.length; i++){
+      //      for (var j = 0; j< arr.length; j++){
+      //          if(arr[i]==arr[j]){continue;}
+           //     var newArr =[];
+
+           // }
+
+         //   found = arr.indexOf(arr[i],1);
+          //  if(found>0){
+          //      arr.splice(arr[i], arr[found+1])
+          //  }
+      //  }
+        //    }
+       //     console.log(unique(vasya));
+
+</script>
+
+</body>
+</html>

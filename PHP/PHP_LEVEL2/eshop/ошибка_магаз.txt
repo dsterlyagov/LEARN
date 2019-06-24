@@ -1,0 +1,47 @@
+const DB_HOST = 'localhost';
+const DB_LOGIN = 'root';
+const DB_PASS = '';
+const DB_NAME = 'test';
+$link = mysqli_connect(DB_HOST, DB_LOGIN, DB_PASS, DB_NAME);
+
+function addItemToCatalog($title, $author, $year, $price){
+    $sql = "INSERT INTO catalog (title, author, year, price) VALUES ($title, $author, $year, $price)";
+    $res = mysqli_query($link, $sql);
+    if (!res){
+        echo 'Товар не добавлен';
+    }
+    $row = mysqli_fetch_assoc($res);
+}
+
+$title = $_POST['title'];
+$author = $_POST['author'];
+$year = $_POST['year'];
+$price = $_POST['price'];
+addItemToCatalog($title, $author, $year, $price);
+if (!addItemToCatalog($title, $author, $year, $price)){
+    echo 'Произошла ошибка при добавлении товара в каталог'; 
+} else {
+    header("Location: index.php"); 
+    exit;
+}
+
+Ответ
+Области видимости.
+Либо добавьте $link, как параметр функции addItemToCatalog(), либо укажите в теле функции, что $link - глобальная.
+PHPВыделить код
+1
+2
+3
+function addItemToCatalog($link, $title, $author, $year, $price){
+    //код
+}
+либо
+PHPВыделить код
+1
+2
+3
+4
+function addItemToCatalog($title, $author, $year, $price){
+     global $link;
+    //код
+}

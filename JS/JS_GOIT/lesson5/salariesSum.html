@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+function sumSalaries(obj){
+    var sum = 0;
+        for (key in obj){
+            sum += (obj[key]);
+    }
+    return sum;
+}
+    var salaries = {
+        'junior': 1000,
+        'middle': 2500,
+        'senior': 3500,
+        'lead': 5000 };
+
+console.log (sumSalaries(salaries));
+
+</script>
+<body>
+</body>
+</html>

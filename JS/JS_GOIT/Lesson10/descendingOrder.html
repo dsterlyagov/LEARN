@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var inpInt = 21445;
+var arr = inpInt.toString().split('');
+arr.sort(function (a,b) {return b - a;
+});
+var newInt = arr.join('');
+
+function descOrder(inp){
+    var arr = inpInt.toString().split('');
+    arr.sort(function (a,b) {return b - a;
+    });
+    newInt = +arr.join('');
+   return newInt;
+}
+    console.log(newInt);
+//CodeWars best
+//function descendingOrder(n){
+  //  return parseInt(String(n).split('').sort().reverse().join(''))
+//}
+console.log(descOrder(inpInt));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+          function sum1(arr) {
+              return arr.reduce(function (a,b) {return a + b;
+                                })
+
+          }
+          console.log(sum1([1,2,3]));
+
+          function sum(argument) {
+              //сначала делаем из псевдомассива arguments массив из значений аргумента
+               var argArr = [].slice.call(arguments);
+               //вызвываем метод reduce для массива метод reduce
+              return argArr.reduce(function (a,b) {return a + b;
+
+              });
+              //arr.reduce(function (a,b) {return a + b;
+              }
+
+
+          console.log(sum(1,3,4,5,6,7,8,9,0,12));
+</script>
+
+</body>
+</html>

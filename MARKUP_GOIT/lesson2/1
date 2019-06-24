@@ -1,0 +1,15 @@
+<label for="month">
+<select id="month">
+    <option value="1">
+        Январь
+    </option>
+    <option value="2">
+        Февраль
+    </option>
+    <option value="3">
+        Март
+    </option>
+    <option value="4">
+        Апрель
+    </option>
+    </label>

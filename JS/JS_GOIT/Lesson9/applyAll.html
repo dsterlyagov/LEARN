@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+          function applyAll(arr,arg1,arg2) {
+              //сначала делаем из псевдомассива arguments массив из значений аргумента
+               var argArr = [].slice.call(arguments);
+               //вызываем аргументы numberArg == 3,4,5,6,7,8,9,0,12
+               var numberArg = argArr.splice.call(arguments,1);
+            //берем первое значение argArr ==  Math.max
+             var funcArg =argArr[0];
+              return funcArg.apply(argArr,numberArg);
+             // return function(){return funcArg.apply(argArr,numberArg);}
+              //function(){return funcArg.apply(argArr, numberArg);}
+
+              }
+
+  console.log (applyAll(Math.max,3,4,5,6,7,8,9,0,12));
+       //   var applyAlll = applyAll(Math.max,3,4,5,6,7,8,9,0,12);
+        //  console.log(applyAlll());
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+div,
+div:after,
+div:before
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 10px 10px 40px 10px;
+    margin: 40px;
+
+    background: #eee;
+    border: 1px solid #8f8f8f;
+}
+
+div:after
+{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: -1;
+    margin: 0;
+    content: '';
+}
+
+div:before
+{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: -1;
+    margin: 0;
+    content: '';
+}

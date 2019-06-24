@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var word = 'Web Development Tutorial';
+//Разбили строку по пробелу в массив методом split(' ')
+    var arr = word.split(' ');
+    //создали объект obj1 для хранения данных количество символов - слово массив не подходит
+    // поскольку количество символов может повторяться
+    var obj1 = {};
+    //в цикле forEach перебираем значения массива arr и присваиваем данные в объект obj1
+    //item.length ключ item значение. Иными словами сформировался объект такого вида 3: "Web"    8: "Tutorial"   11: "Development"
+    arr.forEach(function(item) {
+        obj1[item.length]=  item;
+
+    });
+    console.log(obj1);
+    //Осуществляем поиск max элемента. Для этого перебираем объект for in
+    // условие если ключ > max присваиваем ключ. Обязательно преобразовать ключ к числу иначе он все воспринимает как строки
+    var max = 0;
+    for(key in obj1){
+        if(+key > max){
+          //  console.log(key);
+              max=+key;
+                  }
+
+    }
+    console.log(obj1[max]);
+
+  //  Write a JavaScript function that accepts a string as a parameter and find the longest word within the string. Go to the editor
+  //  Example string: Web Development Tutorial
+
+    //Итоговая функция выглядит следующим образом
+    function maxStringWord(str) {
+        var arr = word.split(' ');
+        var obj1 = {};
+        arr.forEach(function(item) {
+            obj1[item.length]=  item;
+
+        });
+        var max = 0;
+        for(key in obj1){
+            if(+key > max){
+                //  console.log(key);
+                max=+key;
+            }
+
+        }
+        return obj1[max];
+    }
+    console.log(maxStringWord(word));
+</script>
+
+</body>
+</html>

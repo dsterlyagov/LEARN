@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function getVillianName(birthday) {
+       var months = ["The Evil","The Vile","The Cruel", "The Trashy","The Despicable",
+          "The Embarrassing", "The Disreputable", "The Atrocious", "The Twirling",
+            "The Orange", "The Terrifying", "The Awkward"];
+       var dayList = [ "Mustache", "Pickle", "Hood Ornament", "Raisin", "Recycling Bin", "Potato", "Tomato",
+           "House Cat", "Teaspoon",  "Laundry Basket"];
+       var monthString = months[birthday.getMonth()];
+       var day = birthday.getDate();
+       var dayString = dayList[day.toString().slice(-1)];
+       return monthString + ' ' + dayString;
+
+   }
+   var date = new Date(1984, 01, 18);
+   console.log(getVillianName(date));
+</script>
+
+</body>
+</html>

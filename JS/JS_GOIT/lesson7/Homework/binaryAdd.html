@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function add(a,b){
+        return a+b;
+    }
+
+    function mul(a,b){
+        return a*b;
+    }
+
+    function applyF(bynaryFunc){
+        return function (a) {
+            return  function (b) {
+                return bynaryFunc(a,b);
+
+            }
+
+        }
+    }
+    console.log(applyF(mul)(3)(4) );
+
+</script>
+
+</body>
+</html>

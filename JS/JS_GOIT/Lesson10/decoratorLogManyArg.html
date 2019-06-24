@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function work(a,b,c) {
+        /*...*/ // work - произвольная функция, один аргумент
+    }
+
+    function makeLogging(f, log) {
+
+      return  function () {
+          args = [].slice.call(arguments);
+
+        //  console.log(arguments);
+            log.push(args);
+            return f.apply(this, arguments);
+        }
+         }
+
+    var log = [];
+    work = makeLogging(work, log);
+
+   // work(1); // 1
+    work(5,6,7); // 5
+    console.log(log);
+
+    // for (var i = 0; i < log.length; i++) {
+    //     alert( 'Лог:' + log[i] ); // "Лог:1", затем "Лог:5"
+    // }
+</script>
+
+</body>
+</html>

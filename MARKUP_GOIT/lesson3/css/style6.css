@@ -1,0 +1,51 @@
+/*label[for="red"]{color:orange ;}
+label[for="green"]{color:#c9eff3; text-decoration: underline;}
+label[for="blue"]{color:#5dbad5;}
+
+
+input[type="checkbox"] {display: none;}
+#red:checked ~ label[for="red"]
+{ text-decoration: underline;
+color:red;
+    font-weight: bold;
+}
+
+#green:checked ~ label[for="green"]
+{color: green;
+    text-decoration: underline;
+    font-weight: bold;
+    }
+
+#blue:checked ~ label[for="blue"]
+{color: blue;
+    text-decoration: underline;
+    font-weight: bold;}
+
+input[id="green"]:checked ~ span.green
+{background: green;
+    color:white;
+    padding: 0 6px 1px;
+    border-top-right-radius: 6px;
+
+}
+
+#blue:checked ~ .blue
+{background: blue;
+    color:white;
+    border-radius: 6px;
+    padding: 0 6px 1px;}
+
+#red:checked ~ .red
+{background: red;
+    color:white;
+    border-radius: 6px;
+    padding: 0 6px 1px
+}
+
+*/
+
+input#red:checked ~label[for="red"] 
+{ text-decoration: underline;
+color:red;
+    font-weight: bold;
+}

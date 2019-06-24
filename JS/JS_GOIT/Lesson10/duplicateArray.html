@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //По заданному массиву найдите дубликаты в этом массиве и верните новый массив этих дубликатов. Элементы
+  //  возвращаемого массива должны появляться в том порядке, в котором они впервые появились как дубликаты
+
+ //[1, 2, 4, 4, 3, 3, 1, 5, 3, '5']  ==>  [4, 3, 1]
+ var arr1 = [1, 2, 4, 4, 3, 3, 1, 5, 3, '5'];
+    var arr2 =     [0, 1, 2, 3, 4, 5];
+
+function duplicateArray(arr){
+    var newArr = [];
+    arr.forEach(function (item,i) {
+        if((arr.indexOf(item) != i)&& (newArr.indexOf(item) == -1)){
+            newArr.push(item);
+        }
+
+    })
+    return newArr;
+}
+
+    console.log(duplicateArray(arr1));
+//Best of CodeWars
+  //  function duplicates(arr) {
+       // for (var dup = [], i = 0; i < arr.length; i++) {
+       //     var n = arr[i]
+       //     if (arr.indexOf(n, i + 1) >= 0 && dup.indexOf(n) < 0) {
+      //          dup.push(n)
+     //       }
+    //    }
+
+      //  function duplicates(arr) {
+       //     return arr.filter(function(v, i) {return arr.indexOf(v) != i && arr.lastIndexOf(v) == i;});
+      //  }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+ var user = {firstName: 'Вася'};
+ alert(user);
+ //object Object
+
+
+ var user1 = {firstName: 'Вася',
+ toString: function () {
+     return 'Пользователь ' + this.firstName;
+
+ }
+ };
+ alert(user1);
+</script>
+<body>
+
+</body>
+</html>

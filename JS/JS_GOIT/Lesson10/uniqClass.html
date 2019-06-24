@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = ['link', 'menu', 'menu__item', 'menu__item', 'header', 'link', 'footer', 'sidebar', 'link' ];
+    var obj = {};
+    arr.forEach(function (item) {
+        if(!obj[item]){
+            obj[item] = 0;
+        }
+        obj[item] +=1;
+
+    })
+
+    var resArr = [];
+    for(key in obj){
+        resArr.push(key);
+
+    }
+resArr.sort(function (a,b) {return obj[b] -obj[a];
+
+})
+    console.log(resArr);
+    console.log(obj);
+</script>
+
+</body>
+</html>

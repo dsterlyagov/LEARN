@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [5, 7, 4, 8, 3, 0];
+
+    function filterRange(arr, a, b){
+        var newArr = [];
+       for(var i=0 ; i<arr.length ; i++){
+        if(arr[i]<=b && arr[i]>=a){
+            newArr.push(arr[i]);
+        }  }
+        return newArr;
+        };
+    //СОздали новый массив для вывода результатов newArr = [];
+    //загнали в цикл массив
+    // при условии что элемент массива меньше либо равен b и больше либо равен а
+    // push элемент в новый масссив
+    var newFilter = filterRange(arr, 5, 6);
+        console.log(newFilter);
+</script>
+
+</body>
+</html>

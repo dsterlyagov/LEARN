@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<h1 id="title">Title</h1>
+<p id="para">Lorem Ipsum</p>
+<div>Пользователи:</div>
+<ul id="list">
+    <li><a href="#" onclick="bodyStyle.backgroundColor='#999'; bodyStyle.color='white'">Маша</a></li>
+    <li><a href="#" onclick="bodyStyle.backgroundColor='red'; bodyStyle.color='blue'">Вовочка</a></li>
+    <li><a href="#" onclick="bodyStyle.backgroundColor='green'; bodyStyle.color='yellow'">Петр</a></li>
+    <li><a href="#" onclick="bodyStyle.backgroundColor='purple'; bodyStyle.color='grey'">Василиса</a></li>
+    <li><a href="#" onclick="bodyStyle.backgroundColor='#fff'; bodyStyle.color='white'">Дарья</a></li>
+    <li><a href="#" onclick="bodyStyle.backgroundColor='#555'; bodyStyle.color='green'">Матрена</a></li>
+</ul>
+
+<!-- комментарий -->
+
+<script>
+var bodyStyle = document.body.style;
+var elem = document.getElementById('list');
+var  par = elem.previousElementSibling;
+elem.style.color = 'green';
+console.log(par);
+
+
+</script>
+
+</body>
+
+</html>

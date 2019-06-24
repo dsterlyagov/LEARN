@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ function Vehicle(name) {
+     this.name = name;
+ }
+ var mazda = new Vehicle("Mazda");
+ var toyota = new mazda.constructor("Toyota");
+ Vehicle.prototype.rolls = true;
+ Vehicle.prototype.sounds = "BEEP!";
+ console.log(mazda.name);
+ console.log(toyota.name);
+ var car = new Vehicle("44");
+ console.log(car);
+ console.log(Vehicle(88));
+
+</script>
+
+
+
+</body>
+</html>

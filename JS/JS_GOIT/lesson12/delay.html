@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function delay(f, log) {
+
+        return  function () {
+            var args = arguments;
+            var ctx = this;
+
+             setTimeout(function () {
+                f.apply(ctx, args);
+
+            }, log);
+        }
+    }
+
+    function f(x) {
+        alert('Hello ' + x);
+        
+    }
+   var f4000 = delay(f, 4000);
+    var f1500 = delay(f, 9000);
+    f4000('тест1');
+    f1500('тест2');
+</script>
+
+</body>
+</html>

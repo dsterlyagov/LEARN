@@ -1,0 +1,47 @@
+content 1 text + img
+
+<div>content</div>
+
+
+body { font-size: 25px; }
+div {
+  margin: 40px;
+  padding: 20px;
+  background: #eef;
+}
+
+div:before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  content: 'S';
+  margin: -20px 0 0 -20px;
+  background: #ef0;
+  text-align: center;
+}
+
+div:after {
+  position: absolute;
+  content: url(http://lorempixel.com/50/50/);
+  margin: 10px 0 0 10px;
+  text-align: center;
+}
+
+
+
+
+
+Content
+
+<div data-mydata="hey! that is my data"></div>
+
+body
+{
+	font-size: 29px;
+}
+
+div:before
+{
+	content: attr(data-mydata);
+}

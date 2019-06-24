@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Title</h1>
+<p>Lorem Ipsum</p>
+<div>Пользователи:</div>
+<ul>
+    <li>Маша</li>
+    <li>Вовочка</li>
+    <li>Петр</li>
+    <li>Василиса</li>
+    <li>Дарья</li>
+    <li>Матрена</li>
+</ul>
+
+<!-- комментарий -->
+
+<script>
+var bodyStyle = document.body.style;
+bodyStyle.backgroundColor = 'green';
+bodyStyle.color = '#333';
+var liElem = document.body.children[3].children[2];
+liElem.style.color = 'red';
+console.log(liElem);
+</script>
+
+</body>
+
+</html>

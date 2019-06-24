@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var p = 0;
+    var arr = ['шнакри', 'КРИШНА', 'кришна', 'хахре', 'харе', 'харе', '8q0w','кришна'];
+    var arr1 = [];
+    var arr2 = [];
+    arr1 = arr[1].toUpperCase().split('').sort();
+    arr2 = arr[0].toUpperCase().split('').sort();
+    if(arr1 == arr2){alert('333')};
+   console.log(arr1);
+    console.log(arr2);
+   var classObj = {};
+    arr1.forEach(function (elem) {
+        if(!classObj[elem]){
+            classObj[elem] = 1;
+        } else {
+            classObj[elem] +=1;
+        }
+
+    });
+var obj ={};
+    for(var i =0; i<arr.length; i++){
+        var sorted = arr[i].toLowerCase().split('').sort().join('');
+        obj[sorted] = arr[i];
+    }
+    console.log(obj);
+    //console.log(classObj);
+</script>
+
+</body>
+</html>

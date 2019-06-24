@@ -1,0 +1,11 @@
+[href*="google"]
+{
+    color:#666;
+}
+
+[href*="http"]
+{
+    color:#f70;
+}
+
+a[target*="blank"]:after {content: "&#8364";}

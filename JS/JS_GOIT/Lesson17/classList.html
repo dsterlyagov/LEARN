@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="main page">
+
+<script>
+var classList = document.body.classList;
+classList.remove('page');
+classList.add('post');
+for (var i=0; i<classList.length; i++){
+    console.log(classList[i]);
+}
+</script>
+
+</body>
+
+</html>

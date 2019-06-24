@@ -1,0 +1,20 @@
+/* самый распространенный случай все потомки */
+.parent .child
+{aborder: 1px solid red;}
+/*разница в fake child, который навешен на div а не на li*/
+ol.parent li.child
+{aborder: 1px solid blue;}
+
+/*только child*/
+.parent > .child
+{aborder: 1px solid green;}
+/*следующий за*/
+.child04+ .child
+{aborder: 1px solid#b3d4fc}
+.child01~.child
+{aborder: 1px solid black;}
+
+.parent>li:nth-child(even)
+{border: 1px solid red;}
+.parent > li:nth-child(odd)
+{aborder: 1px solid blue;}

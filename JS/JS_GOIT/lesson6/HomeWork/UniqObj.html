@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var p = 0;
+    var arr = ['кришна', 'кришна', 'кришна', 'хахре', 'харе', 'харе', '8q0w','кришна'];
+    var classObj = {};
+    //Создали объект для хранения результатов в виде значение - ключ
+   arr.forEach(function (elem) {
+       if(!classObj[elem]){
+           classObj[elem] = 1;
+       } else {
+           classObj[elem] +=1;
+       }
+
+   });
+   //в цикле forEach перебрали все элементы массива arr при повторении больше одного раза
+    // elem это значение, увеличивали счетчик в результате получили объект вида
+    // {кришна: 4, хахре: 1, харе: 2, 8q0w: 1}
+  // console.log(classObj);
+   var result =[];
+   // Создали массив для преобразования данных и сортировки
+   for (var className in classObj){
+       result.push(className);
+
+   }
+   console.log(classObj);
+   // произвели перебор свойств объекта и затем сортируем по значениям для
+    // этого используем пользовательскую функцию classObj[a] - classObj[b]
+    //если сделать просто a - b будет сортировать по свойствам
+result.sort(function (a, b) {return classObj[a] - classObj[b];});
+
+   console.log(result);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Ghost = function() {
+        this.color = setColor();
+        function setColor() {
+            var colorArr = ["white","yellow", "purple", "red"];
+            function getRandom(min, max) {
+                return Math.floor(Math.random()*(max-min) + min);
+
+            }
+            var rand = getRandom(0,colorArr.length);
+            return colorArr[rand];
+        };
+        // your code goes here
+    };
+
+    ghost = new Ghost();
+  console.log(ghost.color);
+  //  var Ghost = function() {
+   //     this.color = ["white","yellow","purple","red"][Math.floor(Math.random() * 4)];
+ //   };
+</script>
+
+
+
+</body>
+</html>

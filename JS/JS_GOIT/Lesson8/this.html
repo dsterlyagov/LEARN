@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+ var user = {firstName: 'Вася'};
+ var admin = {firstName: 'Админ'};
+ function func(){
+     console.log(this.firstName);
+ }
+ user.f =func;
+user.f();
+    
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function showFullName() {
+        var  firstName = 7;
+        console.log(this.firstName+ ' ' + this.lastName);
+            }
+            var user = {
+                        firstName: 'Василий',
+                        lastName: 'Петров'
+            };
+
+            showFullName.call(user);
+    // вывод в консоли Василий Петров
+    function showFullName1() {
+        var  firstName = 7;
+        console.log(firstName+ ' ' + this.lastName);
+    }
+    var user1 = {
+        firstName: 'Василий',
+        lastName: 'Петров'
+    };
+
+    showFullName1.call(user1);
+    // вывод в консоли 7 Петров
+</script>
+
+</body>
+</html>

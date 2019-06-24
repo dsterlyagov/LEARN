@@ -1,0 +1,70 @@
+body {  margin:0;
+    padding: 0;
+    }
+
+a{text-decoration: none;
+  
+}
+
+ul {margin:0;
+  padding:0;
+  list-style:none;
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+nav {
+  width: 900px;
+  margin: 0 auto 30px;
+}
+
+.main_menu {position:relative;}
+
+
+.main_menu > li  {  display:inline-block;
+				margin-right: 20px;   }
+
+a { display: block;
+  
+  padding: 10px 15px;
+  text-decoration: none;
+/*display: inline-block;outline: none;
+  font-family: 'Lora', serif;
+  transition: .5s linear;*/
+}
+
+
+.second_menu {
+top: 100%;left: 0;
+  position: absolute;
+  
+  color:#acadaf;
+  
+ /*top: 100%;
+  left: 0;
+  width: 100%;index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;acadaf*/
+}
+
+.main ul {
+  background: #4672be;
+}
+.main ul a {
+  color: #695753;
+}
+.main .second_menu {
+  display:none;
+  background: #d6dae0 ;
+}
+
+
+ .main_menu>li:hover .second_menu {
+  display: block;
+  border: 1px;
+}
+.second_menu li  a{ width: 990px; 
+	display: inline; top: 50%; margin: 0 10px;}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var  fac = function f(n){
+        return (n !== 1) ? f(n-1)*n : n;
+    };
+
+    function logResultDecorator(func,funcName ) {
+        return function () {
+            var result = func.apply(this, arguments);
+            console.log(`Результат функции ${funcName}: ${result}`);
+            return result;
+        }
+    }
+    function callCountDecorator(func, funcName){
+        var count = 0;
+        return function () {
+            count++;
+            console.log(`Функция ${funcName} была вызвана ${count} раз`);
+            return func.apply(this,arguments);
+        }
+    }
+function timeDecorator(func, funcName){
+        return function () {
+            var startTime = performance.now();
+            var result = func.apply(this, arguments);
+            var endTime = performance.now() - startTime;
+            console.log(`Функция ${funcName} выполнялась ${endTime}`);
+            return result;
+        }
+}
+function cacheDecorator(func){
+        var cache = {};
+        return function (n) {
+            if(typeof cache[n] === 'undefined'){
+                cache[n] = func.apply(this, arguments);
+            }
+            return cache[n];
+
+        }
+}
+
+function argumentsCountDecorator(func, requiredNumber){
+        return function () {
+            var argsCount = arguments.length;
+            if(requiredNumber !== argsCount){
+                console.warn('Количество аргументов не совпадает!');
+                return;
+            }
+            return func.apply(this, arguments);
+
+        }
+}
+    fac = logResultDecorator(fac, 'factorial');
+    fac = cacheDecorator(fac);
+    fac = callCountDecorator(fac, 'factorial');
+    fac = timeDecorator(fac, 'factorial');
+    fac = argumentsCountDecorator(fac, 1);
+    fac(5);
+    fac(165);
+    fac(165);
+    fac(25, 25);
+</script>
+
+</body>
+</html>

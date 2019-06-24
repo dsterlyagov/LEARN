@@ -1,0 +1,7 @@
+.parent p:nth-child(3)
+{color: blue;}
+
+.parent p:nth-of-type(2)
+{text-decoration: line-through;}
+
+

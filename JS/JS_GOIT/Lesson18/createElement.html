@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="alert">
+    <strong>Ура!</strong> Вы прочитали это важное сообщение.
+</div>
+<script>
+    var oldEl = document.getElementsByClassName('alert');
+    var div = document.createElement('div');
+    div.className = "alert alert-success";
+    div.innerHTML = "Привет страна";
+    oldEl[0].appendChild(div);
+</script>
+
+</body>
+
+</html>

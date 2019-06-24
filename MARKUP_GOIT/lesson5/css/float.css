@@ -1,0 +1,14 @@
+.box {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 10em;
+    border: 2px solid;
+}
+.box::after {
+    content: "-----"; /* Генерируем пустой элемент */
+    clear: both; /* Отменяем обтекание*/
+
+    display: block;
+    margin: 100px;
+}

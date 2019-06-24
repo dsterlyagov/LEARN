@@ -1,0 +1,31 @@
+.main_menu {
+	width:900px;
+	text-align: center;
+	
+	background:#9400d3;
+}
+
+
+ul li {display:inline-block;
+		padding:10px 15px;
+		font-size:16px;
+		font-weight: bold;}
+
+
+/*
+.main_menu ul li:hover {color:#9e9a9a;
+						}
+*/
+.main_menu ul li:hover {background:white;	
+color:black;
+}
+.main_menu ul li:hover a {
+color:black;
+}
+
+a {text-decoration: none;
+		color:white;
+	
+	
+}
+

@@ -1,0 +1,18 @@
+.holder{
+    height: 150px;
+    border: 10px solid #009;
+    position: relative;
+
+}
+.position{
+    position: absolute;
+    -width: 50px;
+   -height: 50px;
+    text-align: center;
+    background: pink;
+    margin: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}

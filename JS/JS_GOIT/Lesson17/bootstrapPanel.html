@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+       body{
+           margin: 50px 100px;
+       }
+        .panel-body_hidden{
+            display: none;
+        }
+        .panel-heading{
+            cursor: pointer;
+        }
+        .panel-heading>span{
+            font-size: 0.875em;
+            display: block;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+<div class="panel panel-default">
+    <div   class="panel-heading" onclick="toggleElem(this)"><span class="panel-status">[Закрыть]</span>
+    Panel heading without title</div>
+    <div class="panel-body">
+        это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
+        на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм
+        шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных
+        изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили
+        публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и,
+        в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется
+        Lorem Ipsum.
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div   class="panel-heading" onclick="toggleElem(this)"><span class="panel-status">[Закрыть]</span>
+        <h3 class="panel-title">Panel title</h3>
+    </div>
+    <div class="panel-body panel-body_hidden">
+        это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
+        на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм
+        шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных
+        изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили
+        публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и,
+        в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется
+        Lorem Ipsum.
+    </div>
+</div>
+<script>
+function toggleElem(elem) {
+ var togglElem = elem.nextElementSibling.classList.toggle('panel-body_hidden');
+
+togglElem != true ? elem.querySelector('.panel-heading > span').innerHTML = '[Закрыть]': elem.querySelector('.panel-heading > span').innerHTML = '[Открыть]';
+
+}
+</script>
+
+</body>
+
+</html>

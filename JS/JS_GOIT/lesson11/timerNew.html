@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var counter = 0;
+        function timer() {
+            counter++;
+        document.getElementById("count").innerHTML = counter;
+        setTimeout("timer()", 1000);
+
+        }
+    </script>
+</head>
+<body onload="timer()">
+Секунд прошло <span id="count">-5</span>
+
+</body>
+</html>

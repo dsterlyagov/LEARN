@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>before_after</title>
+	<link rel="stylesheet" type="text/css" href="css/before_after.css">
+</head>
+<body>
+	
+	<div class="i">me</div>
+</body>
+</html>

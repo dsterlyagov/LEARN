@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   var calc = {
+       name1: 0,
+       name2: 0,
+       read: function() {this.name1 = prompt('Введите 1 число', 0);
+                        this.name2 = prompt('Введите 2 число', 0);    },
+       mul: function () {return +(this.name1) * +(this.name2);
+       },
+       sum: function () {return +(this.name1) + +(this.name2)
+
+       }
+   }
+   calc.read();
+
+
+    console.log (calc.mul());
+   console.log (calc.sum());
+//console.log (people.sort(compareReversed));
+</script>
+
+</body>
+</html>

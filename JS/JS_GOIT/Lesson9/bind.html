@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+        setTimeout(function (){
+alert('Привет'); 1000
+        });
+var user = {
+            firstName: "Вася",
+            sayHi: function () {
+                 alert(this.firstName);
+
+            }
+}
+        setTimeout(user.sayHi.bind(user), 1000);
+
+</script>
+
+</body>
+</html>

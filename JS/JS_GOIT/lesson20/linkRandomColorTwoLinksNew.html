@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        a {
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            color: #009;
+            font-size: 18px;
+            border: 1px solid #99f;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Events Listener</h1>
+<a href="#" id="link">Link</a>
+<a href="#" id="link1">unsubscribe 1</a>
+<a href="#" id="link2">unsubscribe 2</a>
+</body>
+
+<script>
+ function getRandomColor() {
+     var letters ='0123456789ABCDEF'.split('');
+     var color ='#';
+     for (var  i=0; i < 6; i++){
+         color += letters[Math.floor(Math.random()*16)];
+     }
+     return color;
+ }
+ function onLinkClick() {
+     document.body.style.backgroundColor = getRandomColor();
+ }
+ function onlinkClick1(){
+     document.body.style.color = getRandomColor();
+ }
+ link.addEventListener('click', onLinkClick);
+ link.addEventListener('click', onlinkClick1);
+ function onUnsubscribeClick1() {
+     link.removeEventListener('click', onLinkClick);
+ }
+ function onUnsubscribeClick2() {
+     link.removeEventListener('click', onlinkClick1);
+ }
+ link2.addEventListener('click', onUnsubscribeClick2);
+ link1.addEventListener('click', onUnsubscribeClick1);
+</script>
+
+</body>
+
+</html>

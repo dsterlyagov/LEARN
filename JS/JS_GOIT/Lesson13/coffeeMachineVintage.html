@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Machine(power) {
+        this.__power = power +'Ватт';
+      this.__enabled = false;
+      this.enable = function () {
+          this.__enabled = true;
+      };
+      this.disable = function () {
+          this.__enabled = false;
+      }
+    }
+   function coffeeMachine(power) {
+       Machine.apply(this, arguments);
+       this.enable();
+       alert(this.__power);
+       this.getSettings = function () {
+           console.log('Я кофеварка мощностью ' + this.__power + ', Состояние' + this.__enabled);
+       }
+       this.color = 'blue';
+   }
+
+   function vintageOf(power) {
+        coffeeMachine.apply(this, arguments);
+       this.__pedal = 'up';
+       this.setPedalStatus = function(direction){
+           if(direction === 'up' || direction === 'down'){
+               this.__pedal = direction;
+           }
+       };
+       this.getPedalStatus = function(){
+           return this.__pedal;
+       };
+       this.color = 'brown';
+
+   }
+
+   function Frige(power) {
+        Machine.apply(this, arguments);
+       this.getSettings = function () {
+           console.log('Я холодильник мощностью ' + this.__power + ', Состояние' + this.__enabled);
+       }
+
+   }
+
+
+   var vintageCoffeeMachine =  new vintageOf(200);
+    console.log(vintageCoffeeMachine.getPedalStatus());
+    console.log(vintageCoffeeMachine.color);
+
+</script>
+
+</body>
+</html>

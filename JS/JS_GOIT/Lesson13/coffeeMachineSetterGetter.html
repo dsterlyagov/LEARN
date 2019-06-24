@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function coffeeMachine(power, capacity){
+       var WATER_HEAT_CAPACITY = 4200;
+       var waterAmount = 0; // количество воды в кофеварке
+       this.setWaterAmount = function (amount) {
+           if(amount<0){
+               throw new Error("Значение должно быть положительным");
+           } if(amount>capacity){
+               throw new Error("Нельзя залить воды больше" + capacity);
+           }
+          waterAmount =  amount;
+       }
+       this.getWaterAmount = function(){
+           return waterAmount;
+       }
+       function getBoilTime() {
+           return waterAmount*WATER_HEAT_CAPACITY*80/power;
+       }
+       function onReady() {
+           alert('Кофе готов');
+       }
+       this.run = function(){
+           setTimeout(onReady, getBoilTime())
+       }
+
+       alert('Создана кофеварка мощностью' + power +'Ватт');
+
+   }
+   var coffeeMachine = new coffeeMachine(85000,500);
+   coffeeMachine.setWaterAmount(450);
+
+   coffeeMachine.run();
+</script>
+
+</body>
+</html>

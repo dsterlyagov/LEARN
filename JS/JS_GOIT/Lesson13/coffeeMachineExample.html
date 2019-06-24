@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Machine(power) {
+        this.__power = power +'Ватт';
+      this.__enabled = false;
+      this.enable = function () {
+          this.__enabled = true;
+      };
+      this.disable = function () {
+          this.__enabled = false;
+      }
+    }
+   function coffeeMachine(power) {
+       Machine.apply(this, arguments);
+       this.enable();
+       alert(this.__power);
+       this.getSettings = function () {
+           console.log('Я кофеварка мощностью ' + this.__power + ', Состояние' + this.__enabled);
+       }
+   }
+
+   function Frige(power) {
+        Machine.apply(this, arguments);
+       this.getSettings = function () {
+           console.log('Я холодильник мощностью ' + this.__power + ', Состояние' + this.__enabled);
+       }
+
+   }
+
+
+   var coffeeMachine = new coffeeMachine(1000);
+    coffeeMachine.getSettings();
+    var frige = new Frige(4000);
+    frige.getSettings();
+</script>
+
+</body>
+</html>

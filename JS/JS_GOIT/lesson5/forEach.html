@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = ["Яблоко", "Апельсин", "Груша"];
+var research= "Яблоко";
+arr.forEach(function(item, i, arr) {
+    console.log( i + ": " + item + " (массив:" + arr + ")" );
+});
+
+    arr.forEach(function(item, i, arr) {
+       if(item==research){console.log(i);}
+    });
+    var a = ["a", "b", "c"];
+    a.forEach(function(entry) {
+        console.log(entry);
+    });
+    function lastElement(arr) {
+        return arr.pop();
+
+    }
+    console.log(lastElement(arr));
+</script>
+
+</body>
+</html>

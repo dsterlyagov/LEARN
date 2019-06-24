@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+            var user = {
+                        firstName: 'Василий',
+                        lastName: 'Петров',
+                        patronym: 'Иванович'
+            };
+            function showFullName(firstPart, lastPart){
+                console.log(this[firstPart]+' '+this[lastPart]);
+            }
+            //f.call(context,arg1, arg2)
+
+
+            showFullName.call(user, 'firstName', 'lastName');
+    // вывод в консоли Василий Петров
+
+    showFullName.call(user, 'firstName', 'patronym');
+    // вывод в консоли Василий Иванович
+    //Метод call это как будто ты берешь функцию и на время засовываешь внутрь объекта
+
+
+</script>
+
+</body>
+</html>

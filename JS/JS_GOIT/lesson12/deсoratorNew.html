@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function func1(a,b) {
+       return a + b;
+
+    }
+
+    function decorator(f) {
+        return function (a,b) {
+            return 'Ответ' + f(a,b);
+        }
+
+
+
+    }
+    var fu1 = decorator(func1);
+    console.log(fu1(2,3));
+ //
+ //    function deсor(f) {
+ //
+ //        return function () {
+ //           var result = f.apply(null, arguments);
+ //           result = 'Вы хотели получить правильный ответ данной задачи и он равен ' + result;
+ //             return result;
+ //        }
+ //
+ //    }
+ //    var func1 = deсor(func1);
+ //    func1(2,3);
+ //    console.log(func1(2,3));
+ // function decorator(f) {
+ //        return function () {
+ //            return 'Ответ' + f.apply(null, arguments);
+ //        }
+ //
+ // }
+ // var add2 = decorator(func1);
+ //    console.log(add2(2,3));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+input+label{
+
+	color:green;
+}
+
+input:checked+label
+{color:red;}
+input:disabled+label
+{color:#ccc;}

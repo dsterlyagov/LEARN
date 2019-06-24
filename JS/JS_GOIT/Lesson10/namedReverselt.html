@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //  Вы должны создать функцию с именем reverseIt.
+
+    //    Напишите свою функцию так, чтобы в случае, если в качестве данных передавалась строка или число, вы возвращали данные в обратном порядке. Если данные любого другого типа, верните их как есть.
+ // "Hello" -> "olleH"
+ // "314159" -> "951413"
+ //     [1,2,3] -> [1,2,3]
+  function reverseIt(data){
+ if(typeof data ==="string"){
+     return data.split('').reverse().join('');
+ } else if( typeof data === "number"){
+     return +data.toString().split('').reverse().join('');
+ }    else return data;
+
+
+
+  }
+console.log(reverseIt('Синхрофазотрон'));
+</script>
+
+</body>
+</html>

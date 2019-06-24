@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//В настоящий момент функция createFunctions1 выводит 5 при любом значении счетчика
+// потому что значение i она берет по окончании цикла
+    function createFunctions1(n) {
+        var callbacks = [];
+        for (var i=0; i<n; i++) {
+            callbacks.push(function() {
+                return i;
+            });
+        }
+
+        return callbacks;
+    }
+
+var callbackArr1 = createFunctions1(5);
+console.log(callbackArr1[0]());
+console.log(callbackArr1[1]());
+console.log(callbackArr1[2]());
+//Для того чтобы функция брала значения из цикла необходимо создать самовызываемую функцию и вызвать ее сразу же
+//Механизм самовызывающейся функции - (function())()
+// Чтобы функция брала текущее значение i внутри цикла необходимо вызвать эту функцию внутри цикла и на вход подать i
+//вызвать ее с параметром i. Таким образом (function(i))(i). Если на вход не подать первую i функция возьмет ее из внешнего скопа
+// и будет все те же 5. Если же не подать вторую то значение будет undefined.
+
+    function createFunctions(n) {
+        var callbacks = [];
+    for (var i=0; i<n; i++) {
+        (function(i){callbacks.push(function() {
+            return i;});
+        })(i);
+
+    }
+    return callbacks;
+    }
+
+    var callbackArr = createFunctions(5);
+    console.log(callbackArr[0]());
+    console.log(callbackArr[1]());
+    console.log(callbackArr[2]());
+</script>
+
+</body>
+</html>

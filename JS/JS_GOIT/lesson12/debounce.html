@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function func1(x) {
+        console.log(x);
+
+    }
+
+    function debounce(f, time) {
+        var state = true;
+        return function () {
+            if(!state) return
+            f.apply(this, arguments);
+            state = false;
+            setTimeout(function () {
+                state = true;
+            }, time);
+        }
+
+    }
+
+    var func1 = debounce(func1,1000);
+    func1(1);
+    func1(2);
+    setTimeout(function () {func1(3)
+
+    }, 100);
+    setTimeout(function () {func1(4)
+
+    }, 1100);
+
+</script>
+
+</body>
+</html>

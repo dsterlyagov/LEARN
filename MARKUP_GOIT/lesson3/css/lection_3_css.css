@@ -1,0 +1,20 @@
+#myid{
+	color:#ffff0;
+}
+.myclass{
+	color:blue;
+}
+#myid2.myclass{
+	font-weight:bold;
+}
+.myclass.mysuperclass{
+text-decoration:underline;
+
+}
+#myid3.myclass.mysuperclass{
+	font-style:italic;
+}
+
+#myid4.myclass.mysuperclass{
+	background:yellow;
+}

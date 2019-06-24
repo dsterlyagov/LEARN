@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/lection_3_css.css">
+</head>
+<body>
+	
+	<div id="myid">текст1</div>
+	<div class="myclass">текст2</div>
+	<div id="myid2" class="myclass">текст3</div>
+	<div id="myid3" class="myclass mysuperclass">текст4</div>
+	<div id="myid4" class="myclass mysuperclass">текст5</div>
+</body>
+</html>

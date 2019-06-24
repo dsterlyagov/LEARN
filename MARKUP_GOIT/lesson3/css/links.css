@@ -1,0 +1,9 @@
+:visited
+{color: blue;}
+:link
+{color: green;}
+:link:active, :link:focus
+{background: red;
+color: #ffff00}
+:link:hover
+{color: black;}

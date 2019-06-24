@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var myNameSpace = {};
+        myNameSpace.MyClass = function(str) {
+            this.sayHello = function () {
+                return str;
+            };
+        };
+    var myObject = new myNameSpace.MyClass('Hello!');
+
+    var phrase = myObject.sayHello();
+    console.log(phrase)
+    // phrase should be 'Hello!'
+</script>
+
+
+
+</body>
+</html>

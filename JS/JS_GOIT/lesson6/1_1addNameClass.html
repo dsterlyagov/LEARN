@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+var obj = {
+    className: 'open menu'
+};
+
+function addClass(obj, cls){
+ var classes =  obj.className.split(' ');// сначала получаем строку со значениями свойства метода obj
+    // полученную строку методом split преобразуем в массив по пробельному символу
+//запускаем цикл со значениями элементов масссива если совпадение есть функция заканчивает работу
+ for (var i = 0; i< classes.length; i++){
+     if(classes[i] == cls) return; //class уже есть
+ }
+ classes.push(cls); //добавляет элемент которого нет в конец массива методом push()
+    obj.className = classes.join(' '); //и обновить свойство объединяем теперь нужно соединить элементы массива
+    // в одну строку методом join()
+}
+
+addClass(obj, 'new');
+console.log(obj);
+addClass(obj, 'open');
+console.log(obj);
+
+
+
+addClass(obj, 'popa');
+    console.log(obj.className);
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   
+    <meta charset="UTF-8">
+    <title>Title1</title>
+    <link rel="stylesheet" type="text/css" href="css/primer1.css">
+    
+</head>
+    <body>
+  <div class = "main_container">
+<div class = "container1"></div>
+<div class = "container2"></div>
+  </div>
+    </body>
+
+</html>

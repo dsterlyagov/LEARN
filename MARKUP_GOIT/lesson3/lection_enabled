@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>enabled_disabled</title>
+	<link rel="stylesheet" type="text/css" href="css/enabled.css">
+</head>
+<body>
+	<form action="#" type="checkbox">
+		
+ <input type="checkbox" id="cbox" ><label for="cbox">Клик</label>
+	</form>
+</body>
+</html>

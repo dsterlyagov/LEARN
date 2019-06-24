@@ -1,0 +1,11 @@
+p:first-line, span:first-line {
+
+	font-size:300%;
+}
+/* не работает у строковых элементов*/
+p:first-letter, span:first-letter {
+
+	color:red;
+}
+
+span { display:inline-block; }

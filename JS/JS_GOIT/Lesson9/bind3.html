@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+function f(a,b) {
+    alert(this.name);
+
+}
+var user = {
+    name: 'Getya'
+}
+var g = f.bind(user);
+    g();
+</script>
+
+</body>
+</html>

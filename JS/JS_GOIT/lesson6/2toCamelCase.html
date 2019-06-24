@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+//Функция преобразования в CamelCase. Все дефисы удаляются после дефиса обязательно заглавная буква т.е. Иа-иа преобра-
+//зуется в ИаИа
+    var str = "ва-ба"; // ищем в этой строке
+    var arr = str.split('-');// разбиваем исходную строку на массив по - в данном случае получится массив из двух элементов
+//  ["Иа", "иа"]
+   var  arr1 = arr[1].charAt(0).toUpperCase(); //берем второй элемент массива arr[1], он равен в данном случае иа от него
+// методом charAt(0) забираем первый элемент и приводим к прописной букве методом toUpperCase() и получаем И ( там  была и)
+   var arr2 = arr[1].slice(1); // берем второй элемент массива, он равен arr[1], он равен в данном случае иа от него
+// копируем часть методом  slice(1) начиная со второй позиции
+//теперь соединяем части массива в целое конкатенируя +
+    var arr3 = arr1 + arr2; //получили Иа
+arr[1]  = arr3; //заменили элемент иа на Иа
+//теперь нужно соединить элементы массива в одну строку методом join()
+    var res  = arr.join('');
+    console.log(arr);
+    console.log(arr1);
+    console.log(arr2);
+    console.log(arr3);
+    console.log (res);
+            function toCamelCase(str){
+        var arr = str.split('-');
+        //var arr1 = [];
+        for(var i = 0; i< arr.length; i++){
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+           // arr1.push(arr1[i]);
+        }
+        return arr.join('');
+    }
+   console.log(toCamelCase(str));
+
+</script>
+<body>
+
+</body>
+</html>

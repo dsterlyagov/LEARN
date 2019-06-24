@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var fruits = ["Яблоко", "Апельсин", "Груша", "Персик", "Банан"];
+    function randArrayElement(arr){
+    var min = 0;
+    var max = fruits.length - 1;
+    var rand = min + Math.floor(Math.random()*(max+1-min));
+    return arr[rand];
+}
+        console.log(randArrayElement(fruits));
+</script>
+
+</body>
+</html>

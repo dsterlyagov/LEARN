@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="left">левая колонка</div>
+  <div class="center">
+    средняя колонка
+    <br/> более высокая,
+    <br/> занимает 3 строки
+  </div>
+  <div class="right">правая колонка</div>
+</div>
+
+
+/*
+	в построении лэйаута 
+	есть несоколько задач:
+
+	— расположить контент горизонтально
+	  display: inline-block, 
+	  float: left,
+	  position: absolute
+	  таблица
+
+	— сделать так, чтобы контент 
+	  не переполнял колонку
+	  min-width,
+	  overflow,
+	  таблица
+
+	— сделать так, чтобы колонки
+	  никогда не проваливались одна
+	  под другую
+	  white-space: nowrap;
+	  сумма ширин float-блоков 
+	  всегда равна или меньше 
+	  ширины родителя
+	  
+	— отступы, бордеры и фон
+	  как правило вложенный элемент
+	  чтобы не допустить ширины > 100%
+	  (50% + 10px || + 10px 50%)
+*/
+
+body {
+  font-size: 29px;
+}
+
+.container {
+  /* предотвращаем налезание элементов */
+  
+  min-width: 700px;
+  white-space: nowrap;
+}
+
+.left,
+.center,
+.right {
+  display: inline-block;
+  /* включаем внутри обратно, наследуется */
+  
+  white-space: normal;
+  vertical-align: top;
+}
+
+.left {
+  width: 16%;
+  /* 
+	невозможно сделать 
+	min-margin 20px 
+*/
+  
+  margin-left: 2%;
+}
+
+.center {
+  width: 56%;
+}
+
+.right {
+  width: 24%;
+  margin-right: 2%;
+}

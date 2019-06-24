@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+
+
+<body>
+<textarea name="" id="area" cols="40" rows="8">Кликни меня</textarea>
+</body>
+
+<script>
+area.onmousedown = function(){this.value +="mousedown\n";  this.scrollTop = this.scrollHeight; }
+area.onmouseup = function(){this.value +="mouseup\n";  this.scrollTop = this.scrollHeight; }
+area.onclick = function(){this.value +="click\n";  this.scrollTop = this.scrollHeight;  }
+</script>
+
+</body>
+
+</html>

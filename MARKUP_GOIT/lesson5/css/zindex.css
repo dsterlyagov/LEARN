@@ -1,0 +1,28 @@
+.green,
+.gray,
+.red,
+.blue{
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    background: #ccc;
+}
+.red{
+    background: red;
+}
+.blue{
+    left: 40px;
+    top: -40px;
+    background: blue;
+    z-index: 151;
+}
+.green{
+    background:green;
+    left: 50px;
+    top: 50px;
+    z-index: 155;
+}
+.gray{
+    z-index: 155;
+}

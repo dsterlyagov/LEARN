@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   var obj ={
+       name: 'Hello',
+       age: '30',
+       drink: true,
+       classes: ['1', 2, 'a',['abc']]
+   }
+
+   var JString = JSON.stringify(obj);
+   console.log(JString);
+
+   var room = {
+       number: 23,
+       occupy: function () {
+           alert(this.number);
+
+       }
+   }
+   var event = {
+       title: 'Конференция',
+       date: new Date(Date.UTC(2014, 0, 1)),
+       room: room
+
+   }
+   console.log(JSON.stringify(event));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Вы создадите функцию с именем add. Эта функция вернет сумму всех аргументов. Звучит легко, не так ли?
+  //    Ну, вот поворот. Входы будут постепенно увеличиваться с их индексом в качестве параметра функции.
+   // add(3,4,5);
+    /*
+    returns ( 3 * 1 ) + ( 4 * 2 ) + ( 5 * 3 ) = 26
+    */
+    function add() {
+        var sum = 0;
+        for (var i = 1; i<=arguments.length; i++) {
+            sum += i*arguments[i-1]
+        }
+        return sum;
+    }
+  console.log(add(3,4,5));
+
+    //BEST OF CODEWARS
+    //function add() {
+      //  return [].reduce.call(arguments, function(sum,v,i) { return sum + v * (i+1); }, 0);
+    //}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+   function coffeeMachine(power) {
+       this.waterAmount = 430;
+       var WATER_HEAT_CAPACITY = 4200;
+       var self = this;
+
+       function getBoilTime() {
+           return self.waterAmount * WATER_HEAT_CAPACITY * 80 / power;
+       }
+       function onReady() {
+           alert ('Кофе готов!');
+       }
+       this.run = function () {
+           setTimeout(onReady, getBoilTime());
+       };
+       this.stop = function () {
+           clearInterval(this.run, alert('STOP'));
+       }
+   }
+var cMachine = new coffeeMachine(3445);
+   cMachine.run();
+ cMachine.stop();
+</script>
+
+</body>
+</html>
